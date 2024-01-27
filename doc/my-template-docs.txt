@@ -3,11 +3,11 @@
 ==============================================================================
 Table of Contents                         *my-template-docs-table-of-contents*
 
-1. Base16 Live Reload                    |my-template-docs-base16-live-reload|
+1. base16-live-reload                    |my-template-docs-base16-live-reload|
   - Installation & Configuration|my-template-docs-base16-live-reload-installation-&-configuration|
 
 ==============================================================================
-1. Base16 Live Reload                    *my-template-docs-base16-live-reload*
+1. base16-live-reload                    *my-template-docs-base16-live-reload*
 
 
 
