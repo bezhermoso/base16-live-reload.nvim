@@ -3,11 +3,11 @@
 ==============================================================================
 Table of Contents                         *my-template-docs-table-of-contents*
 
-1. base16-live-reload                    |my-template-docs-base16-live-reload|
-  - Installation & Configuration|my-template-docs-base16-live-reload-installation-&-configuration|
+1. base16-live-reload.nvim          |my-template-docs-base16-live-reload.nvim|
+  - Installation & Configuration|my-template-docs-base16-live-reload.nvim-installation-&-configuration|
 
 ==============================================================================
-1. base16-live-reload                    *my-template-docs-base16-live-reload*
+1. base16-live-reload.nvim          *my-template-docs-base16-live-reload.nvim*
 
 
 
@@ -15,7 +15,7 @@ Automatically sync up Neovim colorscheme with your terminal base16-shell theme
 <https://github.com/tinted-theming/base16-shell>!
 
 
-INSTALLATION & CONFIGURATION*my-template-docs-base16-live-reload-installation-&-configuration*
+INSTALLATION & CONFIGURATION*my-template-docs-base16-live-reload.nvim-installation-&-configuration*
 
 Via `lazy.nvim` <https://github.com/folke/lazy.nvim>
 
