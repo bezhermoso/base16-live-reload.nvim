@@ -15,17 +15,17 @@ local function check_prerequisites()
 end
 
 local function get_files_to_watch()
-    -- tinted-theming/base16-shell uses XDG_CONFIG_PATH if present.
-    local config_dir = vim.env.XDG_CONFIG_HOME
-    if config_dir == nil or config_dir == '' then
-        config_dir = '~/.config'
-    end
-    return {
-        -- tinted-theming/base16-shell writes this file
-        config_dir .. "/tinted-theming/set_theme.lua",
-        -- chriskempson/base16-shell writes this file
-        "~/.vimrc_background",
-    }
+  -- tinted-theming/base16-shell uses XDG_CONFIG_PATH if present.
+  local config_dir = vim.env.XDG_CONFIG_HOME
+  if config_dir == nil or config_dir == "" then
+    config_dir = "~/.config"
+  end
+  return {
+    -- tinted-theming/base16-shell writes this file
+    config_dir .. "/tinted-theming/set_theme.lua",
+    -- chriskempson/base16-shell writes this file
+    "~/.vimrc_background",
+  }
 end
 
 ---@param config Config
@@ -42,7 +42,7 @@ local function start_watcher(config)
       on_event = function()
         vim.schedule(base16.load_from_shell)
         vim.schedule(config.callback or function() end)
-      end
+      end,
     })
     ::continue::
   end
@@ -51,7 +51,7 @@ end
 ---@class Config
 ---@field callback function Optional callback you'd like called on file-change.
 local config = {
-  callback = function() end
+  callback = function() end,
 }
 
 ---@class MyModule
