@@ -11,7 +11,7 @@ Via [`lazy.nvim`](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-  "bezhermoso/base16-live-reload",
+  "bezhermoso/base16-live-reload.nvim",
   dependencies = {
     { "RRethy/nvim-base16" },  -- REQUIRED!
     { "rktjmp/fwatch.nvim" },  -- REQUIRED!
