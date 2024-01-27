@@ -1,13 +1,13 @@
-*my-template-docs.txt*     For Neovim >= 0.8.0    Last change: 2024 January 27
+*base16-live-reload.txt*    For Neovim >= 0.8.0   Last change: 2024 January 27
 
 ==============================================================================
-Table of Contents                         *my-template-docs-table-of-contents*
+Table of Contents                       *base16-live-reload-table-of-contents*
 
-1. base16-live-reload.nvim          |my-template-docs-base16-live-reload.nvim|
-  - Installation & Configuration|my-template-docs-base16-live-reload.nvim-installation-&-configuration|
+1. base16-live-reload.nvim        |base16-live-reload-base16-live-reload.nvim|
+  - Installation & Configuration|base16-live-reload-base16-live-reload.nvim-installation-&-configuration|
 
 ==============================================================================
-1. base16-live-reload.nvim          *my-template-docs-base16-live-reload.nvim*
+1. base16-live-reload.nvim        *base16-live-reload-base16-live-reload.nvim*
 
 
 
@@ -15,7 +15,7 @@ Automatically sync up Neovim colorscheme with your terminal base16-shell theme
 <https://github.com/tinted-theming/base16-shell>!
 
 
-INSTALLATION & CONFIGURATION*my-template-docs-base16-live-reload.nvim-installation-&-configuration*
+INSTALLATION & CONFIGURATION*base16-live-reload-base16-live-reload.nvim-installation-&-configuration*
 
 Via `lazy.nvim` <https://github.com/folke/lazy.nvim>
 
@@ -38,7 +38,7 @@ Via `lazy.nvim` <https://github.com/folke/lazy.nvim>
 <
 
 ==============================================================================
-2. Links                                              *my-template-docs-links*
+2. Links                                            *base16-live-reload-links*
 
 1. *GitHub Workflow Status*: https://img.shields.io/github/actions/workflow/status/ellisonleao/nvim-plugin-template/lint-test.yml?branch=main&style=for-the-badge
 2. *Lua*: https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua
