@@ -17,12 +17,23 @@ Via [`lazy.nvim`](https://github.com/folke/lazy.nvim):
     { "rktjmp/fwatch.nvim" },  -- REQUIRED!
   },
   config = function ()
-    require("base16-colorscheme").setup(...) -- Setup nvim-base16
-    require("base16-live-reload").setup({
-      callback = function () -- Optional callback when theme is reloaded.
-        vim.notify("base16-shell changed. neovim colorscheme synced!", vim.log.levels.INFO)
-      end
-    })
+    require("base16-colorscheme").setup() -- Setup nvim-base16
+    require("base16-live-reload").setup()
   end
 }
 ```
+
+## `Base16ReloadPost` event
+
+Register an autocmd handler for the `Base16ReloadPost` if there's logic you'd like to run after the colorscheme has
+reloaded:
+
+```lua
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'Base16ReloadPost',
+  callback = function()
+        vim.notify("base16-shell changed. neovim colorscheme synced!", vim.log.levels.INFO)
+  end
+})
+```
+

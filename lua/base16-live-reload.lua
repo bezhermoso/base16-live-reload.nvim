@@ -28,6 +28,10 @@ local function get_files_to_watch()
   }
 end
 
+local function trigger_autocmd()
+  vim.cmd([[doautocmd User Base16ReloadPost]])
+end
+
 ---@param config Config
 local function start_watcher(config)
   local fwatch = require("fwatch")
@@ -41,7 +45,7 @@ local function start_watcher(config)
     fwatch.watch(full_path, {
       on_event = function()
         vim.schedule(base16.load_from_shell)
-        vim.schedule(config.callback or function() end)
+        vim.schedule(trigger_autocmd)
       end,
     })
     ::continue::
@@ -49,10 +53,7 @@ local function start_watcher(config)
 end
 
 ---@class Config
----@field callback function Optional callback you'd like called on file-change.
-local config = {
-  callback = function() end,
-}
+local config = {}
 
 ---@class MyModule
 local M = {}
