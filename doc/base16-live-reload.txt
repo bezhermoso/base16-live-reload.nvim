@@ -1,4 +1,4 @@
-*base16-live-reload.txt*     For Neovim >= 0.8.0    Last change: 2024 April 07
+*base16-live-reload.txt*      For Neovim >= 0.8.0     Last change: 2024 May 21
 
 ==============================================================================
 Table of Contents                       *base16-live-reload-table-of-contents*
