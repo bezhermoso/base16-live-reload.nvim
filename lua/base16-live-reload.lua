@@ -1,4 +1,7 @@
 -- main module file
+--
+---@class MyModule
+local M = {}
 
 local function check_prerequisites()
   local ok = pcall(require, "base16-colorscheme")
@@ -32,10 +35,14 @@ local function trigger_autocmd()
   vim.cmd([[doautocmd User Base16ReloadPost]])
 end
 
----@param config Config
-local function start_watcher(config)
-  local fwatch = require("fwatch")
+M.reload = function ()
   local base16 = require("base16-colorscheme")
+  vim.schedule(base16.load_from_shell)
+  vim.schedule(trigger_autocmd)
+end
+
+local function start_watcher(_)
+  local fwatch = require("fwatch")
   local files = get_files_to_watch()
   for _, f in ipairs(files) do
     local full_path = vim.fn.expand(f)
@@ -44,8 +51,7 @@ local function start_watcher(config)
     end
     fwatch.watch(full_path, {
       on_event = function()
-        vim.schedule(base16.load_from_shell)
-        vim.schedule(trigger_autocmd)
+        M.reload()
       end,
     })
     ::continue::
@@ -54,9 +60,6 @@ end
 
 ---@class Config
 local config = {}
-
----@class MyModule
-local M = {}
 
 ---@type Config
 M.config = config
@@ -72,6 +75,7 @@ M.setup = function(args)
     return
   end
 
+  M.reload()
   start_watcher(M.config)
 end
 
